@@ -55,7 +55,7 @@ function source:complete(request, callback)
       table.insert(items, {
         label = completion.word,
         detail = completion.menu,
-        documentation = {
+        documentation = completion.info and {
           kind = cmp.lsp.MarkupKind.PlainText,
           value = completion.info,
         },
